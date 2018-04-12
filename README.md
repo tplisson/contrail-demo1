@@ -104,17 +104,17 @@ why?
 ### 14. Create VN Policy in Contrail
 ```
 Config > Networking > Policies
-"blue-red"
-"red-net" <--> "blue-net" (bidirectional)
+"allow-ping"
+Protocol=ICMP		Network=ANY <> (Bidirectional)
 ```
 
 ### 15. Attach Policy to each VN
 ```
 Config > Networking > Networks 
 Edit: blue-net
-Add Network-Policy: "blue-red"
+Add Network-Policy: "allow-ping"
 Edit: red-net
-Add Network-Policy: "blue-red"
+Add Network-Policy: "allow-ping"
 ```
 
 ### 16. Ping from VM-blue-1 to VM-red-1
