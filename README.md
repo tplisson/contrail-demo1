@@ -61,7 +61,7 @@ Project > Compute > Instances > Launch
 "blue" x2 image=cirros-image	 flavor=cirros256
 ```
 What IP addresses assigned ?
->>> Assigned by Contrail via DHCP
+(Assigned by Contrail via DHCP)
 
 ## Contrail Web UI
 
@@ -71,7 +71,7 @@ Monitor > Networking > Instances
 ```
 On which compute nodes are the VM instances installed?
 Attached to which network? 
->>> blue-net - yep!
+(blue-net - yep!)
 
 ### 10. Login to blue1 and ping blue2 (pick VMs on different compute nodes)
 ```
@@ -99,7 +99,7 @@ Project > Compute > Instances > Launch
 ping 10.0.2.xxx	<<< should fail 
 ```
 why? 
->> Policy lacking
+(lacking a Policy to allow traffic between VNs)
 
 ### 14. Create VN Policy in Contrail
 ```
