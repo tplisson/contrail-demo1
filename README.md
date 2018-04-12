@@ -158,16 +158,26 @@ Create a new Analyzer
 ```
 
 ### 5.2 View the Analyzer
-Show Wireshark trace
-Highlight the encapsulation used
+- Show Wireshark trace
+- Highlight the encapsulation used
 
 ### 5.3 Show Analytics data about the pings sent across
 ```
 Monitor > Infrastructure > Virtual Routers > Flows
 ```
 
-## 5. Contrail Service Chaining
+## 6. Contrail Service Chaining
 ---- TO BE CONTINUED ----
 ...Insert a vSRX service instance between the 2 networks...
+
+
+## 7. Contrail Gateway Router
+---- TO BE CONTINUED ----
+Connect one of the VN to a physical router
+
+- Show the MX configuration with:
+    - MP-iBGP to Contrail SDN Controller
+    - Routing Instance with a specific Route Target
+- Simply add the same RT to the VN configuration
 
 -------------------------
