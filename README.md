@@ -126,7 +126,7 @@ why?
 ```
 Config > Networking > Policies
 "allow-ping"
-Protocol=ICMP		Network=ANY <> (Bidirectional)
+Protocol=ICMP	Network=ANY <> (Bidirectional)
 ```
 
 ### 4.2. Attach Policy to each VN
@@ -142,7 +142,7 @@ Add Network-Policy: "allow-ping"
 ```
 ping 10.0.2.xxx 
 ```
-Ping should succeed.
+- Ping should succeed
 
 CQFD! :)
 
@@ -151,7 +151,13 @@ CQFD! :)
 ## 5. Contrail Analyzer
 ---- TO BE CONTINUED ----
 
-### 5.1 Create an Analyzer
+### 5.1 Create an image in OpenStack
+```
+Project > Compute > Images > Create Image
+"Analyzer"	image=analyzer-vm-3.2.0.0-19.qcow2	format=QCOW2
+```
+- Image shoud become "Active"
+
 ```
 Monitor > Debug > Packet Capture
 Create a new Analyzer
@@ -170,6 +176,13 @@ Monitor > Infrastructure > Virtual Routers > Flows
 ---- TO BE CONTINUED ----
 
 - Insert a vSRX service instance between the 2 networks...
+
+```
+Project > Compute > Images > Create Image
+"vSRX-Transparent"	image=vSRX-Transparent	format=raw
+"vSRX-In-Network"	image=vSRX-In-Network	format=raw
+```
+- Images shoud become "Active"
 
 
 ## 7. Contrail Gateway Router
