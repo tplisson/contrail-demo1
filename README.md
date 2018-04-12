@@ -168,16 +168,17 @@ Monitor > Infrastructure > Virtual Routers > Flows
 
 ## 6. Contrail Service Chaining
 ---- TO BE CONTINUED ----
-...Insert a vSRX service instance between the 2 networks...
+
+- Insert a vSRX service instance between the 2 networks...
 
 
 ## 7. Contrail Gateway Router
 ---- TO BE CONTINUED ----
-Connect one of the VN to a physical router
 
-- Show the MX configuration with:
-    - MP-iBGP to Contrail SDN Controller
-    - Routing Instance with a specific Route Target
-- Simply add the same RT to the VN configuration
+- Connect one of the VN to a physical router
+    - Show the MX configuration with:
+        - MP-iBGP to Contrail SDN Controller
+        - Routing Instance with a specific Route Target
+    - Simply add the same RT to the VN configuration
 
 -------------------------
