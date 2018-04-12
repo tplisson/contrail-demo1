@@ -1,7 +1,7 @@
 # contrail-demo1
 Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Using OpenStack Horizon and Contrail Web UI
 
-## 1. OpenS tack CLI 
+## 1. OpenStack CLI 
 
 ### 1.1 OpenStack Status on OpenStack node
 ```
@@ -15,7 +15,7 @@ openstack-status
 ```
 openstack-status
 
-	openstack-nova-compute		active
+	openstack-nova-compute		    active
 	libvirt-bin				active
 ```
 
