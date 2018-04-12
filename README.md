@@ -96,8 +96,9 @@ Project > Compute > Instances > Launch
 
 ### 13. Ping from VM-blue to VM-red (pick VMs on different compute nodes)
 ```
-ping 10.0.2.xxx	<<< should fail 
+ping 10.0.2.xxx
 ```
+Ping should fail.
 why? 
 (lacking a Policy to allow traffic between VNs)
 
@@ -117,7 +118,7 @@ Edit: red-net
 Add Network-Policy: "allow-ping"
 ```
 
-### 16. Ping from VM-blue-1 to VM-red-1
+### 16. Ping from blue-1 to red-1
 ```
 ping 10.0.2.xxx 
 ```
