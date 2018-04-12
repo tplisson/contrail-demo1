@@ -5,8 +5,8 @@ Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Usin
 
 ### 1. Login to the Dashboard - Horizon
 ```
-http://<ip-address>/horizon	<<< 
-http://<ip-address>/dashboard	<<< 
+http://<ip-address>/horizon	<<< Mitaka
+http://<ip-address>/dashboard	<<< Ocata (since Newton?)
 ```
 
 ### 2. Create a new project (=tenant)
