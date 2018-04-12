@@ -15,7 +15,7 @@ openstack-status
 ```
 openstack-status
 
-	openstack-nova-compute		    active
+	openstack-nova-compute			active
 	libvirt-bin				active
 ```
 
@@ -146,8 +146,10 @@ Ping should succeed.
 
 CQFD! :)
 
----- TO BE CONTINUED ----
+
+
 ## 5. Contrail Analyzer
+---- TO BE CONTINUED ----
 
 ### 5.1 Create an Analyzer
 ```
@@ -164,7 +166,8 @@ Highlight the encapsulation used
 Monitor > Infrastructure > Virtual Routers > Flows
 ```
 
----- TO BE CONTINUED ----
 ## 5. Contrail Service Chaining
+---- TO BE CONTINUED ----
 ...Insert a vSRX service instance between the 2 networks...
+
 -------------------------
