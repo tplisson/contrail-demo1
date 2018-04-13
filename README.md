@@ -202,10 +202,10 @@ Configure > Infrastructure > BGP Routers > Create BGP Router
 ```
 
 | Field  | Description |
-| ------------- | ------------- |
-| Hostname  | Enter a name for the node being added.  |
-| IP Address  | The IP address of the node. |
-| Autonomous System  | Enter the AS number for the node. (BGP peer only) |
+| --- | --- |
+| Hostname | Enter a name for the node being added. |
+| IP Address | The IP address of the node. |
+| Autonomous System | Enter the AS number for the node. (BGP peer only) |
 		
 
 
