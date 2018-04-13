@@ -194,4 +194,69 @@ Project > Compute > Images > Create Image
         - Routing Instance with a specific Route Target
     - Simply add the same RT to the VN configuration
 
+### Contrail BGP Router Configuration
+
+Configure BGP peering in the control node:
+```
+Configure > Infrastructure > BGP Routers > Create BGP Router
+```
+
+| Field  | Description |
+| ------------- | ------------- |
+| Hostname  | Enter a name for the node being added.  |
+| IP Address  | The IP address of the node. |
+| Autonomous System  | Enter the AS number for the node. (BGP peer only) |
+		
+
+
+### Gateway router configuration (Junos OS)
+
+Enable tunnel services:
+```
+chassis {
+    fpc <fpc-id> {
+        pic <pic-id> {
+            tunnel-services {
+
+            }
+        }
+    }
+}
+```
+
+Configure the GRE tunnel that connects the VRF routing instance in the MX Series router to the Contrail network:
+```
+routing-options {
+    router-id <router-id>;
+    autonomous-system <ASN>; ## Must match Contrail​
+    dynamic-tunnels {
+        <group-name> { 
+            source-address <contrail-control-node-ip-address>;
+            gre;
+            destination-networks {
+                <subnet>; ## Specify the network on which Contrail VR peer(s) reside
+            }
+        }
+    }
+}
+```
+
+Configure BGP peering with Contrail Control node(s)
+```
+protocols {
+    bgp {
+        group contrail {
+            type internal;
+            local-address 10.0.1.1; ## MX Series router loopback or interface IP address
+            family inet-vpn {
+                any;
+            }
+            family route-target;    ## optional
+            neighbor <contrail-control-node-ip-address>;
+        }
+    }
+}
+```
+
+
 -------------------------
