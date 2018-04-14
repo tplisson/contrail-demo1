@@ -1,8 +1,9 @@
 # contrail-demo1
 Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Using OpenStack Horizon and Contrail Web UI
 
-## 1. OpenStack CLI 
 
+## 1. OpenStack CLI 
+---
 ### 1.1 OpenStack Status on OpenStack node
 ```
 openstack-status
@@ -20,7 +21,7 @@ openstack-status
 ```
 
 ## 2. OpenStack GUI / Dashboard (Horizon)
-
+---
 ### 2.1 Login to the Dashboard - Horizon
 ```
 http://<ip-address>/horizon	<<< Mitaka
@@ -81,6 +82,7 @@ Project > Compute > Instances > Launch
 What IP addresses assigned ?
 (Assigned by Contrail via DHCP)
 
+-------------------------
 ## 3. Contrail Virtual Network Creation
 
 ### 3.1. Check on Contrail Web UI
@@ -121,7 +123,7 @@ why?
 (lacking a Policy to allow traffic between VNs)
 
 ## Contrail Network Policies
-
+-------------------------
 ### 4.1. Create VN Policy in Contrail
 ```
 Config > Networking > Policies
@@ -147,8 +149,8 @@ ping 10.0.2.xxx
 CQFD! :)
 
 
-
 ## 5. Contrail Analyzer
+-------------------------
 ---- TO BE CONTINUED ----
 
 ### 5.1 Create an image in OpenStack
@@ -173,6 +175,7 @@ Monitor > Infrastructure > Virtual Routers > Flows
 ```
 
 ## 6. Contrail Service Chaining
+---
 ---- TO BE CONTINUED ----
 
 - Insert a vSRX service instance between the 2 networks...
@@ -228,7 +231,7 @@ Configure the GRE tunnel that connects the VRF routing instance in the MX Series
 ```
 routing-options {
     router-id <router-id>;
-    autonomous-system <ASN>; ## Must match Contrail​
+    autonomous-system <ASN>; ## Must match Contrail​ Control node
     dynamic-tunnels {
         <group-name> { 
             source-address <contrail-control-node-ip-address>;
