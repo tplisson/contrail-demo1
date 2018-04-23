@@ -6,6 +6,8 @@ Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Usin
 ---
 ### 1.1 OpenStack Status on OpenStack node
 ```
+ssh lab@openstack 
+
 openstack-status
 
 	openstack-nova-api			active
