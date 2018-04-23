@@ -6,12 +6,14 @@ Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Usin
 ---
 ### 1.1 OpenStack Status on OpenStack node
 ```
-ssh lab@openstack 
+(ssh lab@openstack)
 
 openstack-status
 
 	openstack-nova-api			active
 	libvirt-bin				active
+	
+openstack --version
 ```
 
 ### 1.2. OpenStack Status on Compute node
@@ -30,7 +32,11 @@ http://<ip-address>/horizon	<<< Mitaka
 http://<ip-address>/dashboard	<<< Ocata (since Newton?)
 ```
 
-### 2.2. Create a new project (=tenant)
+### 2.2  Show project overview
+```
+Project > Compute > Overview
+```
+### 2.2. Create a new project (=tenant)   (optional)
 ```
 Identity > Users
 "demo1"
