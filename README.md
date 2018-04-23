@@ -158,23 +158,37 @@ CQFD! :)
 
 
 ## 5. Contrail Analyzer
--------------------------
----- TO BE CONTINUED ----
 
 ### 5.1 Create an image in OpenStack
 ```
 Project > Compute > Images > Create Image
 "Analyzer"	image=analyzer-vm-3.2.0.0-19.qcow2	format=QCOW2
 ```
-- Image shoud become "Active"
 
+### 5.2 Create an Analyzer in Contrail
+- Image shoud become "Active"
 ```
 Monitor > Debug > Packet Capture
 Create a new Analyzer
+Associate Networks > "blue-net red-net"
 ```
 
-### 5.2 View the Analyzer
-- Show Wireshark trace
+### 5.3 View the Analyzer
+```
+Monitor > Debug > Packet Capture
+Create a new Analyzer "sniffer1"
+Associate Networks > "blue-net red-net"
+Analyzer Rules > Proto=ICMP Src="blue-net" Dst="red-net" bidir.
+```
+- Check on which host the sniffer has been provisioned
+```
+Monitor > Networking > Instances
+```
+
+### 5.4 Launch the Analyzer VM 
+```
+Monitor > Debug > Packet Capture > Show Wireshark trace
+```
 - Highlight the encapsulation used
 
 ### 5.3 Show Analytics data about the pings sent across
