@@ -1,6 +1,12 @@
 # contrail-demo1
 Contrail Demo: creating VM instances, virtual networks, VN policies... etc. Using OpenStack Horizon and Contrail Web UI
 
+| System | Username | Password | URL |
+| --- | --- | --- | --- |
+OpenStack | admin | secret123 | http://172.25.11.201/horizon | 
+Contrail | admin | secret123 | http://172.25.11.201:8143  | 
+AppFormix | admin | secret123 | https://appformix:9000/dashboard | 
+Junos Space SD | super | lab123	| https://172.25.11.100/mainui | 
 
 ## 1. OpenStack CLI 
 ---
